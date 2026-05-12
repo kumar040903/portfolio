@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GOKUL RAJ | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg, #2f2f2f, #4f4f4f, #6e6e6e, #8e8e8e);
+color:white;
+}
+
+
+/* Navbar */
+nav{
+display:flex;
+justify-content:center;
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(10px);
+padding:15px;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+/* Hero Section */
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.profile{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid white;
+box-shadow:0 0 25px rgba(255,255,255,0.8);
+object-fit:cover;
+}
+
+.profile:hover{
+transform:scale(1.05);
+transition:0.4s;
+}
+
+h1{
+font-size:40px;
+margin:10px;
+}
+
+.typing{
+font-size:22px;
+color:yellow;
+}
+
+/* Sections */
+section{
+padding:40px;
+text-align:center;
+}
+
+.card{
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(12px);
+margin:30px auto;
+padding:35px;              /* increased padding */
+border-radius:15px;
+width:90%;                 /* increased width */
+max-width:1000px;           /* increased max size */
+box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+.about-list{
+list-style:none;
+padding-left:0;
+margin-top:15px;
+text-align:center;   /* center the whole list */
+}
+
+.about-list li{
+font-size:18px;
+line-height:1.8;
+margin-bottom:15px;  /* space between lines */
+text-align:center;   /* center each sentence */
+}
+
+.certificate-list{
+list-style:none;      /* removes bullets */
+padding-left:0;
+margin-top:15px;
+text-align:center;
+}
+
+.certificate-list li{
+font-size:18px;      /* increased font size */
+margin-bottom:18px;  /* more space between lines */
+line-height:1.8;
+font-weight:400;
+}
+
+.skill{
+margin:8px 0;
+padding:0;
+background:none;
+box-shadow:none;
+border-radius:0;
+font-size:18px;
+}
+
+
+/* Footer */
+footer{
+text-align:center;
+padding:20px;
+background: rgba(0,0,0,0.3);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+
+<!-- PROFILE PHOTO ADDED HERE -->
+<img src="ajai.r.JPG" class="profile" alt="AJAI KUMAR.R">
+
+<h1>AJAI KUMAR.R</h1>
+
+
+<p>MCA Student | Data Analyst | Web Developer</p>
+
+</section>
+
+<!-- About -->
+<section id="about">
+<div class="card">
+<h2>About Me</h2>
+
+<ul class="about-list">
+
+<li>I am an enthusiastic MCA student with a strong interest in application development and emerging technologies.</li>
+
+<li>I enjoy solving problems and exploring innovative ideas.</li>
+
+<li>I like transforming concepts into real-world software solutions.</li>
+
+<li>I am passionate about Data Analyst, web development, and UI/UX design.</li>
+
+<li>I continuously work on improving my technical and creative skills.</li>
+
+<li>My goal is to build impactful, user-friendly applications.</li>
+
+<li>I aim to grow as a professional software developer.</li>
+
+</ul>
+
+</div>
+</section>
+
+
+
+
+<!-- Education -->
+<section id="education">
+<div class="card">
+<h2>Education</h2>
+<p>MCA – SNS College of Technology (2025–2027)</p>
+<p>BSC (C.S) – St.Joseph's College (2022–2025)</p>
+</div>
+</section>
+
+
+<!-- Skills -->
+<section id="skills">
+<div class="card">
+<h2>Skills</h2>
+<div class="skill">C (Beginner)</div>
+<div class="skill">SQL (Beginner)</div>
+<div class="skill">HTML (Beginner)</div>
+<div class="skill">UI/UX Design (Beginner)</div>
+</div>
+</section>
+<!-- Certificates -->
+<section id="certificates">
+<div class="card">
+
+<h2>Certificates</h2>
+
+<ul class="certificate-list">
+
+<li>Flutter Development Certification</li>
+
+<li>Web Development Certification</li>
+
+<li>SQL and Database Certification</li>
+
+<li>UI/UX Design Certification</li>
+
+<li>IBM SkillBuild Certification</li>
+
+<li>Data Science Tools Certification</li>
+
+</ul>
+
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<div class="card">
+<h2>Contact</h2>
+<p>Email: ajai156262@gmail.com</p>
+<p>Contact: 7010441639 </p>
+<p>Location: Viralimalai, TamilNadu</p>
+<p>LinkedIn: www.linkedin.com/in/ajaikumarr-r</p>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+© 2026 AJAI KUMAR Portfolio
+</footer>
+
+<script>
+
+const text = ["Data Analyst","Web Developer","UI/UX Designer"];
+let index=0;
+let char=0;
+
+function type(){
+if(char<text[index].length){
+document.getElementById("typing").innerHTML+=text[index].charAt(char);
+char++;
+setTimeout(type,100);
+}
+else{
+setTimeout(erase,1000);
+}
+}
+
+function erase(){
+if(char>0){
+document.getElementById("typing").innerHTML=text[index].substring(0,char-1);
+char--;
+setTimeout(erase,50);
+}
+else{
+index++;
+if(index>=text.length) index=0;
+setTimeout(type,200);
+}
+}
+
+type();
+
+</script>
+
+</body>
+</html>
